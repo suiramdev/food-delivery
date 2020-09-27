@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-family: 'Rubik';
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+footer {
+    background-color: #1e282c;
+    height: 150px;
+}
