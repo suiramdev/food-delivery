@@ -1,9 +1,13 @@
+@import "animations.css";
+@import "navbar.css";
+@import "modal.css";
+
 body {
     margin: 0;
     font-family: 'Rubik';
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 a {

@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <title>Uber like</title>
 
+    <script src="https://kit.fontawesome.com/f864103c2e.js" crossorigin="anonymous"></script>
+    <script src="scripts/modal.js"></script>
     <script src="scripts/navbar.js"></script>
 
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
     <nav>
-        <h1>Logo here</h1>
+        <h1>Food delivery</h1>
         <ul>
-            <li><a class="btn" href="">sign up</a></li>
-            <li><a href="">sign in</a></li>
+            <li><a class="btn" onclick="document.querySelector('#signUp').classList.add('active');">sign up</a></li>
+            <li><a onclick="document.querySelector('#signIn').classList.add('active');">sign in</a></li>
         </ul>
     </nav>
     <section id="main">
@@ -28,14 +29,62 @@
                 In vel est id leo fermentum ullamcorper. Quisque pharetra dictum fringilla.
                 Vivamus et dignissim risus. Aenean porta neque non porta blandit. Etiam iaculis diam massa, ac consequat
                 augue scelerisque non..</p>
-            <a href="#">LEARN MORE</a>
+            <a href="#learnmore">LEARN MORE</a>
         </div>
         <img class="illustration" src="images/main_illustration.svg">
     </section>
-    <section></section>
+    <section id="learnmore">
+    </section>
     <footer>
-        
+
     </footer>
+
+    <div class="modal" id="signUp">
+        <div class="container">
+            <a class="close" onclick="closeModals()"><i class="fas fa-times"></i></a>
+            <h1>Sign up</h1>
+            <form>
+                <div class="form-group">
+                    <i class="fas fa-at"></i>
+                    <input type="email" placeholder="Email" required>
+                    <label>Email</label>
+                </div>
+                <div class="form-group">
+                    <i class="far fa-user"></i>
+                    <input type="text" placeholder="Username" required>
+                    <label>Username</label>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                    <label>Password</label>
+                </div>
+                <a class="form-more" href="#">Mot de passe oublié</a>
+                <input class="form-confirm" href="#" type="submit" value="Sign up">
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="signIn">
+        <div class="container">
+            <a class="close" onclick="closeModals()"><i class="fas fa-times"></i></a>
+            <h1>Sign in</h1>
+            <form>
+                <div class="form-group">
+                    <i class="far fa-user"></i>
+                    <input type="text" placeholder="Username" required>
+                    <label>Username</label>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                    <label>Password</label>
+                </div>
+                <a class="form-more" href="#">Mot de passe oublié</a>
+                <input class="form-confirm" href="#" type="submit" value="Sign in">
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

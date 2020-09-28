@@ -1,31 +1,43 @@
+@import "animations.css";
+
 section#main {
     display: flex;
     align-items: center;
 }
 
-section#main::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70vh;
-    background: url("../images/main.svg") no-repeat top left;
-    border-radius: 0 0 40% 40%;
-    transform: scale(1.5);
-    z-index: -1;
+@media screen and (min-width: 1024px) {
+    section#main::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70vh;
+        background: url("../images/main.svg") no-repeat top left;
+        background-color: white;
+        border-radius: 0 0 40% 40%;
+        transform: scale(1.5);
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    section#main {
+        background-color: #27DEBF;
+    }
 }
 
 section#main .info {
     width: 550px;
     margin-left: 3rem;
+    animation: 3s slideRight;
 }
 
 section#main .info h1 {
     font-size: 2.5rem;
     font-weight: lighter;
     margin: 0;
-    color: white;   
+    color: white;
 }
 
 section#main .info p {
@@ -53,6 +65,7 @@ section#main .info a::before {
     transform: translateX(-100%);
     width: 100%;
     height: 100%;
+    border-radius: 50px;
     background-color: white;
     z-index: -1;
     transition: transform 0.5s;
@@ -71,6 +84,7 @@ section#main .illustration {
     position: absolute;
     right: 10rem;
     width: 500px;
+    animation: 3s slideDown;
 }
 
 @media screen and (max-width: 1280px) {

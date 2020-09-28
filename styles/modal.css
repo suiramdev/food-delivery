@@ -1,0 +1,122 @@
+.modal {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.modal.active {
+    visibility: visible;
+}
+
+.modal.active .container {
+    animation: 0.5s scaleUp;
+}
+
+.modal .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 4rem;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.modal .container .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: #27DEBF;
+}
+
+.modal .container .close:hover {
+    cursor: pointer;
+    color: #22c0a6;
+}
+
+.modal .container h1 {
+    margin: 0;
+}
+
+.modal .container form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.modal .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 0.3rem;
+    margin-top: 3rem;
+    border-bottom: 2px solid #27DEBF;
+}
+
+.modal .form-group label {
+    position: absolute;
+    left: 1.5rem;
+    font-size: 0.8rem;
+    color: gray;
+    transition: transform 0.2s, font-sizeZ;
+}
+
+.modal .form-group i {
+    margin-right: 6px;
+}
+
+.modal .form-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+}
+
+.modal .form-group input::placeholder {
+    color: transparent;
+}
+
+.modal .form-group input:focus+label,
+.modal .form-group input:not(:placeholder-shown)+label {
+    font-size: 0.7rem;
+    transform: translate(-1.5rem, -1.4rem);
+}
+
+.modal .form-more {
+    font-size: 0.6rem;
+    margin-top: 0.3rem;
+    margin: 0.5rem 0 0 auto;
+}
+
+.modal .form-more:hover {
+    text-decoration: underline;
+}
+
+.modal .form-confirm {
+    width: 50%;
+    padding: 0.7rem 1rem;
+    margin: 2.5rem auto 0 auto;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: #27DEBF;
+    color: white;
+    text-align: center;
+}
+
+.modal .form-confirm:hover {
+    cursor: pointer;
+    background-color: #22c0a6;
+}
