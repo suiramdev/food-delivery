@@ -6,7 +6,6 @@
     <title>Uber like</title>
 
     <script src="https://kit.fontawesome.com/f864103c2e.js" crossorigin="anonymous"></script>
-    <script src="scripts/modal.js"></script>
     <script src="scripts/navbar.js"></script>
 
     <link rel="stylesheet" href="styles/style.css">
@@ -41,7 +40,7 @@
 
     <div class="modal" id="signUp">
         <div class="container">
-            <a class="close" onclick="closeModals()"><i class="fas fa-times"></i></a>
+            <a class="close" onclick="document.querySelector('#signUp').classList.remove('active');"><i class="fas fa-times"></i></a>
             <h1>Sign up</h1>
             <form>
                 <div class="form-group">
@@ -59,7 +58,6 @@
                     <input type="password" placeholder="Password" required>
                     <label>Password</label>
                 </div>
-                <a class="form-more" href="#">Mot de passe oublié</a>
                 <input class="form-confirm" href="#" type="submit" value="Sign up">
             </form>
         </div>
@@ -67,7 +65,7 @@
 
     <div class="modal" id="signIn">
         <div class="container">
-            <a class="close" onclick="closeModals()"><i class="fas fa-times"></i></a>
+            <a class="close" onclick="document.querySelector('#signIn').classList.remove('active');"><i class="fas fa-times"></i></a>
             <h1>Sign in</h1>
             <form>
                 <div class="form-group">
