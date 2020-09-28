@@ -60,15 +60,15 @@
     align-items: center;
     padding-bottom: 0.3rem;
     margin-top: 3rem;
-    border-bottom: 2px solid #27DEBF;
+    border-bottom: 2px solid gray;
+    color: gray;
 }
 
 .modal .form-group label {
     position: absolute;
     left: 1.5rem;
     font-size: 0.8rem;
-    color: gray;
-    transition: transform 0.2s, font-sizeZ;
+    transition: transform 0.2s, font 0.2s;
 }
 
 .modal .form-group i {
@@ -90,7 +90,12 @@
 .modal .form-group input:focus+label,
 .modal .form-group input:not(:placeholder-shown)+label {
     font-size: 0.7rem;
-    transform: translate(-1.5rem, -1.4rem);
+    transform: translateY(-1.4rem);
+}
+
+.modal .form-group:focus-within {
+    color: #27DEBF;
+    border-color: #27DEBF;
 }
 
 .modal .form-more {
