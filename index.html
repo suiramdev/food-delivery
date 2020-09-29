@@ -3,14 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Uber like</title>
+    <meta name="author" content="suiramdev">
+    <meta name="color-scheme" content="only light">
+    <title>Food delivery</title>
 
     <script src="https://kit.fontawesome.com/f864103c2e.js" crossorigin="anonymous"></script>
     <script src="scripts/navbar.js"></script>
 
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Rubik">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="styles/style.css"> <!-- Is also including some other css files inside of it. -->
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
@@ -23,7 +24,7 @@
         </ul>
     </nav>
     <section id="main">
-        <div class="info">
+        <div class="info dark">
             <h1>Food delivery <b>fast</b><br>
                 and <b>secure</b></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -34,7 +35,7 @@
         </div>
         <img class="illustration" src="images/main_illustration.svg">
     </section>
-    <section id="restaurants">
+    <section id="restaurants" class="dark">
         <form class="filters">
             <div class="form-group">
                 <i class="fas fa-map-marker-alt"></i>
@@ -49,9 +50,37 @@
         </div>
     </section>
     <footer>
-
+        <div class="links">
+            <div style="flex: 2;">
+                <h1>Food delivery</h1>
+            </div>
+            <div style="flex: 1;">
+                <a href="">À propos de nous</a>
+                <a href="">Consultez notre blog</a>
+                <a href="">Créez un compte professionnel</a>
+                <a href="">Ajoutez votre restaurant</a>
+                <a href="">Devenez coursier-partenaire</a>
+            </div>
+            <div style="flex: 1;">
+                <a href="">Obtenir de l'aide</a>
+                <a href="">Consultez la FAQ</a>
+                <a href="">Affichez toutes les villes</a>
+                <a href="">Tous les pays</a>
+                <a href="">Restaurants à proximité</a>
+                <a href="">Français</a>
+            </div>
+        </div>
+        <div class="more">
+            <div class="social-medias">
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <p>© 2020 suiramdev</p>
+        </div>
     </footer>
 
+    <!-- signUp modal, add an 'active' class to display it -->
     <div class="modal" id="signUp">
         <div class="container">
             <a class="close" onclick="document.querySelector('#signUp').classList.remove('active');"><i class="fas fa-times"></i></a>
@@ -77,6 +106,7 @@
         </div>
     </div>
 
+    <!-- signIn modal, add an 'active' class to display it -->
     <div class="modal" id="signIn">
         <div class="container">
             <a class="close" onclick="document.querySelector('#signIn').classList.remove('active');"><i class="fas fa-times"></i></a>
