@@ -1,5 +1,5 @@
-# Food delivery template
-Looking to proof and learn more skills in front-end, i developed a typical template of a food delivery website such as Uber Eats. 
+# Food delivery
+Looking to proof and learn more skills in front-end, i developed my own food delivery website such as Uber Eats. 
 
 ## Built With
 -   [FontAwesome](https://fontawesome.com)  - A toolkit for icons
