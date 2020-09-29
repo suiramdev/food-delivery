@@ -1,11 +1,19 @@
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
 .modal {
     visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
@@ -16,18 +24,19 @@
     visibility: visible;
 }
 
-.modal.active .container {
-    animation: 0.5s scaleUp;
-}
-
 .modal .container {
     position: relative;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    padding: 3rem 4rem;
-    background-color: white;
+    align-self: center;
+    justify-self: center;
+    padding: 0.5rem;
     border-radius: 4px;
+    background-color: white;
+}
+
+.modal.active .container {
+    animation: 0.5s scaleUp;
 }
 
 .modal .container .close {
@@ -43,13 +52,15 @@
     color: #22c0a6;
 }
 
-.modal .container h1 {
-    margin: 0;
+.modal .container .title {
+    text-align: center;
 }
 
 .modal .container form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 2.5rem 3.5rem;
     width: 300px;
 }
 
@@ -58,10 +69,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
     padding-bottom: 0.3rem;
     margin-top: 3rem;
     border-bottom: 2px solid gray;
     color: gray;
+    transition: color 0.2s, border-color 0.2s;
 }
 
 .modal .form-group label {
@@ -87,15 +100,25 @@
     color: transparent;
 }
 
+/* Floating label animation */
 .modal .form-group input:focus+label,
 .modal .form-group input:not(:placeholder-shown)+label {
     font-size: 0.7rem;
     transform: translateY(-1.4rem);
 }
 
-.modal .form-group:focus-within {
+/* Color on focus */
+.modal .form-group:focus-within,
+.modal .form-group:focus-within input {
     color: #27DEBF;
     border-color: #27DEBF;
+}
+
+/* Show invalid */
+.modal .form-group:invalid,
+.modal .form-group:invalid input {
+    color: #de2727;
+    border-color: #de2727;
 }
 
 .modal .form-more {
@@ -111,7 +134,7 @@
 .modal .form-confirm {
     width: 50%;
     padding: 0.7rem 1rem;
-    margin: 2.5rem auto 0 auto;
+    margin-top: 2.5rem;
     font-size: 1rem;
     border: none;
     outline: none;

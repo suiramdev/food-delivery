@@ -1,4 +1,22 @@
-@import "animations.css";
+@keyframes slideDown {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-200%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
 
 section#main {
     display: flex;
