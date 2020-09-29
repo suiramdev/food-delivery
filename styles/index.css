@@ -58,10 +58,6 @@ section#main .info h1 {
     color: white;
 }
 
-section#main .info p {
-    color: #263238;
-}
-
 section#main .info a {
     position: relative;
     overflow: hidden;
@@ -133,7 +129,6 @@ section#restaurants .filters .form-group {
     border-radius: 50px;
     background-color: white;
     width: 100%;
-    color: #263238;
 }
 
 section#restaurants .filters .form-group i {

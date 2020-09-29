@@ -19,6 +19,66 @@ section {
 }
 
 footer {
+    padding: 2rem 0;
     background-color: #1e282c;
-    height: 150px;
+    color: white;
+}
+
+footer>div {
+    display: flex;
+    margin: 0 4rem;
+}
+
+footer .links {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #27DEBF;
+}
+
+footer .links div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .links div a {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+footer .links div a:hover {
+    text-decoration: underline;
+}
+
+footer .links div a:first-child {
+    font-weight: bold;
+}
+
+footer .more {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.footer .more .social-medias {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+footer .more .social-medias a {
+    margin-right: 1rem;
+    color: white;
+}
+
+footer .more p {
+    text-align: right;
+    margin: 0;
+    flex: 1;
+}
+
+.dark {
+    color: #1e282c;
+}
+
+.light {
+    color: #27DEBF;
 }
